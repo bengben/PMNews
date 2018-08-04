@@ -1,7 +1,7 @@
 <view class="page">
  
   <view >
-    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <scroll-view scroll-x="true"  class="tab-h" scroll-left="{{scrollLeft}}">
         <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">今天</view>
         <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">本周</view>
         <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">这月</view>
@@ -9,22 +9,29 @@
     <view class='tags'>
       <view class='tag active'>#所有</view><view class='tag'>#读书</view><view class='tag'># 融资</view>
     </view>
-    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+    <swiper class="tab-content" current="{{currentTab}}"  duration="300" bindchange="switchTab"
      style="height:{{winHeight}}rpx">
-        <swiper-item wx:for="{{[0,1,2]}}">
-            <scroll-view scroll-y="true" class="scoll-h" >
-                <block wx:for="{{[1,2]}}" wx:key="*this">
-                    <view class="item-ans">
-                        <view class="avatar">
-                            <image class="img" src="http://ookzqad11.bkt.clouddn.com/avatar.png"></image>
-                        </view>
-                        <view class="expertInfo">
-                            <view class="name">欢颜</view>
-                            <view class="tags">知名情感博主</view>
-                            <view class="answerHistory">134个回答，2234人听过 </view>
-                        </view>
-                        <navigator url="/pages/askExpert/expertDetail" class="askBtn">问TA</navigator> 
-                    </view>
+        <swiper-item wx:for="{{[0,1,2]}}" wx:key="*this">
+            <scroll-view  wx:for="{{[1,2,3]}}" wx:key="*this" scroll-y="true" class="scoll-h" >
+                <block >
+                  <view class="weui-flex item">
+                      <view><image  class="item avatar" src="http://ookzqad11.bkt.clouddn.com/avatar.png"></image></view>
+                      <view class="weui-flex__item">
+                        <view class='item name'>Khaled Tammam</view>
+                        <view class='item desc'>just now ,from iphone 6s</view> 
+                      </view>
+                      <!-- <view class="weui-flex__item"><view class="placeholder">weui</view></view> -->
+                  </view>
+                  <view class="weui-flex item content">Blue makes me feel better. How about you 3333 ?Blue makes me feel better. How about you ?</view> 
+                  <!-- <view class="weui-flex item more">more...</view> -->
+                  
+                  <view><image lazy-load='true' mode='center'  class="item image-left" src="../image/1.png"></image></view>
+                  <!-- <view><image lazy-load='true' mode='center'  class="item image-right-top" src="../image/2.png"></image></view> -->
+                  <!-- <view><image lazy-load='true' mode='center'  class="item image-right-bottom" src="../image/2.png"></image></view> -->
+
+                  <view class="weui-flex "></view>
+
+
                 </block>
             </scroll-view>
         </swiper-item>
