@@ -18,9 +18,30 @@
       <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd"  class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
         <view style="width: {{stv.windowWidth}}px;" wx:for="{{tabs}}" wx:key="unique" class="one-scene">
           <scroll-view style="height:100%" scroll-y>
-            <view wx:for="1" wx:key="unique">
-              <text>{{page}}滑动</text>
-            </view>
+            <block >
+                  <view class="weui-flex item">
+                      <view><image  class="item avatar" src="http://ookzqad11.bkt.clouddn.com/avatar.png"></image></view>
+                      <view class="weui-flex__item">
+                        <view class='item name'>Khaled Tammam</view>
+                        <view class='item desc'>just now ,from iphone 6s</view> 
+                      </view>
+                      <!-- <view class="weui-flex__item"><view class="placeholder">weui</view></view> -->
+                  </view>
+                  <view class="weui-flex item content">Blue makes me feel better. How about you 3333 ?Blue makes me feel better. How about you ?</view> 
+                  <!-- <view class="weui-flex item more">more...</view> -->
+                  
+                  <view><image lazy-load='true'   class="item image-left" src="../image/1.png"></image></view>
+                  <!-- <view><image lazy-load='true' mode='center'  class="item image-left" src="../image/1.png"></image></view> -->
+                  <view><image lazy-load='true'   class="item image-right-top" src="../image/2.png"></image></view>
+                  <view><image lazy-load='true'   class="item image-right-bottom" src="../image/3.png"></image></view>
+                  <!-- <view><image lazy-load='true' mode='center'  class="item image-right-bottom" src="../image/2.png"></image></view> -->
+
+                  <view class="weui-flex "></view>
+
+
+                </block>
+
+                
           </scroll-view>
         </view>
       </view>
