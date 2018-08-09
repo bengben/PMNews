@@ -1,13 +1,14 @@
 const app = getApp()
 Page({
   data: {
-    tabs: ['Today', 'Week', 'Month'],
+    tabs: ['发现', '周记'],
     page:'没有',
     stv: {
       windowWidth: 0,
       lineWidth: 0,
       offset: 0,
-      tStart: false
+      tStart: false,
+      scrollvieWidth:0
     },
     activeTab: 0
   },
@@ -17,8 +18,15 @@ Page({
       
       let res = wx.getSystemInfoSync()
       this.windowWidth = res.windowWidth;
+      this.data.stv.scrollvieWidth = res.windowHeight - 90;
+      
+      console.log('screenWidth	屏幕宽度', res.screenWidth);
+      console.log('statusBarHeight	状态栏的高度', res.statusBarHeight);
+      console.log('windowHeight	可使用窗口高度', res.windowHeight);
+      console.log('scrollvieWidth', this.data.stv.scrollvieWidth);
+      console.log('windowHeight:', res.windowHeight-90)
       this.data.stv.lineWidth = this.windowWidth / (this.data.tabs.length*2)-10;
-      console.log('this.windowWidth:' + this.windowWidth + " this.data.tabs.length:" + this.data.tabs.length +" = "+ this.data.stv.lineWidth)
+      console.log('this.windowWidth:' + this.windowWidth + "      this.data.tabs.length:" + this.data.tabs.length +" = "+ this.data.stv.lineWidth)
       this.data.stv.windowWidth = res.windowWidth;
       this.setData({ stv: this.data.stv })
       this.tabsCount = tabs.length;
@@ -49,7 +57,7 @@ Page({
     this.setData({ stv: stv });
   },
   handlerCancel(e) {
-
+    console.log(e);
   },
   handlerEnd(e) {
     let { clientX, clientY } = e.changedTouches[0];
