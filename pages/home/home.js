@@ -10,7 +10,7 @@ Page({
       tStart: false,
       scrollvieWidth:0
     },
-    activeTab: 0
+    // activeTab: 0
   },
   onLoad: function (options) {
     try {
@@ -58,6 +58,15 @@ Page({
   },
   handlerCancel(e) {
     console.log(e);
+  },
+  upper: function (e) {
+    console.log(e)
+  },
+  lower: function (e) {
+    console.log(e)
+  },
+  scroll: function (e) {
+    console.log(e)
   },
   handlerEnd(e) {
     let { clientX, clientY } = e.changedTouches[0];
@@ -109,5 +118,19 @@ Page({
   },
   handlerTabTap(e) {
     this._updateSelectedPage(e.currentTarget.dataset.index);
+  },
+
+  //跳转详情页面
+  naviToDetail(){
+    console.log(this);
+    wx.navigateTo({
+      url: "../detail/detail",
+      success:function(){
+        console.log('success:跳转到详情页面');
+      },
+      fail:function(){
+        console.log('Fail:跳转到详情页面');
+      }
+    })
   }
 })

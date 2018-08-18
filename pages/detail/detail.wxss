@@ -1,0 +1,93 @@
+.page{
+  color: #414446;
+  font-family: Arial, 微软雅黑, "Microsoft yahei", "Hiragino Sans GB", "冬青黑体简体中文 w3", "Microsoft Yahei", "Hiragino Sans GB", "冬青黑体简体中文 w3", STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif;
+}
+.top-image-container{
+  display: flex;
+  justify-content: center;
+  /* border-radius:10rpx; */
+}
+.top-image{
+  /* border-radius:10rpx; */
+  width: 100%;
+}
+.name-container{
+  display: flex;
+  justify-content: flex-start;
+}
+.avatar{
+  width: 80rpx;
+  height: 80rpx;
+  position: relative;
+}
+.name{
+  font-size: 30rpx;
+  font-weight:500;
+  width: 100%;
+  color: #7D7475;
+  margin: 30rpx 1rpx 1rpx 15rpx;
+}
+.tag-container{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.tag{
+  font-size: 12px ;
+  color: #414446;
+  font-weight:400;
+  border:2rpx solid #ECF3F9;
+  padding:4rpx 15rpx; 
+  background:#ECF3F9;
+  max-width:140rpx;
+  height:40rpx;
+  border-radius:40rpx;
+  margin:25rpx 1rpx 1rpx 5rpx;
+}
+.avatar{
+  width: 65rpx;
+  height: 65rpx;
+  margin:25rpx 1rpx 1rpx 15rpx;
+
+}
+.title{
+  font-size: 30rpx;
+  font-weight:600;
+  width: 100%;
+  color: #414446;
+  margin: 20rpx 1rpx 1rpx 15rpx;
+}
+.content{
+  margin: 30rpx 25rpx auto 25rpx;
+  font-size: 30rpx;
+  font-weight:300;
+  color: #7D7475;
+  line-height: 1.8;
+}
+.fab{
+  position:fixed;
+  right:3%;
+  bottom:30rpx;
+  cursor:pointer;
+  background:#414446;
+  opacity:0.6;
+  width:100rpx;
+  height:100rpx;
+  text-align:center;
+  border-radius: 50%;
+  z-index:99;
+
+}
+
+.btn-icon{
+  width: 50rpx;
+  height: 50rpx;
+  padding:  25rpx 15rpx 1rpx 1rpx;
+}
+.return-btn{
+  width: 60%;
+  /* height: 100rpx; */
+  display: flex;
+  justify-content: center;
+  margin: 30rpx auto;
+}

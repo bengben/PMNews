@@ -1,12 +1,14 @@
 {
   "pages":[
+    
     "pages/home/home",
+    "pages/detail/detail",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Loading...",
+    "navigationBarTitleText": "Loading...每天装载一点",
     "navigationBarBackgroundColor": "#ffffff",
     "backgroundColor": "#ffffff"
   }
